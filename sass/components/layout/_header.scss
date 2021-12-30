@@ -1,0 +1,38 @@
+@import "../helpers/mixins";
+@import "../helpers/variable";
+
+#header {
+  @include flex(row, space-between, center);
+  padding: 2% 10%;
+  background: transparent;
+  .logo {
+    color: $White;
+  }
+  ul {
+    @include flex(row, center, center);
+    li {
+      padding: 0 5%;
+      position: relative;
+      a {
+        color: $White;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+        &:hover,
+        &.active {
+          color: $Primary;
+        }
+        &.active::after,
+        &:hover::after {
+          content: "";
+          width: 30%;
+          height: 0.2rem;
+          background: $Primary;
+          position: absolute;
+          bottom: -30%;
+          left: 1.1rem;
+        }
+      }
+    }
+  }
+}
