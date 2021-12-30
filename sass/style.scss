@@ -1,0 +1,64 @@
+// Imports
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-display: auto;
+  overflow-x: hidden !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 3.625rem;
+  letter-spacing: 0.125rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 2.75rem;
+  letter-spacing: 0.094rem;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  letter-spacing: 0.072rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+  line-height: 2.375rem;
+  letter-spacing: 0.125rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+  line-height: 2.063rem;
+  letter-spacing: 0.106rem;
+}
+
+h6 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.081rem;
+}
+
+p {
+  font-size: 0.938rem;
+  line-height: 1.563rem;
+}
