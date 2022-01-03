@@ -5,34 +5,84 @@
   @include flex(row, space-between, center);
   padding: 2% 10%;
   background: transparent;
+  #openbtn {
+    display: none;
+    color: $White;
+    cursor: pointer;
+  }
   .logo {
     color: $White;
   }
-  ul {
-    @include flex(row, center, center);
-    li {
-      padding: 0 5%;
-      position: relative;
-      a {
-        color: $White;
-        font-weight: bold;
-        text-transform: uppercase;
-        transition: all 0.3s ease-in-out;
-        &:hover,
-        &.active {
-          color: $Primary;
-        }
-        &.active::after,
-        &:hover::after {
-          content: "";
-          width: 30%;
-          height: 0.2rem;
-          background: $Primary;
-          position: absolute;
-          bottom: -30%;
-          left: 1.1rem;
+  nav {
+    transition: all 1s ease-in-out;
+    #closebtn {
+      color: $White;
+      margin: 1rem;
+      display: none;
+      cursor: pointer;
+    }
+    ul {
+      @include flex(row, center, center);
+      li {
+        padding: 0 5%;
+        position: relative;
+        a {
+          color: $White;
+          font-weight: bold;
+          text-transform: uppercase;
+          transition: all 0.3s ease-in-out;
+          &:hover,
+          &.active {
+            color: $Primary;
+          }
+          &.active::after,
+          &:hover::after {
+            content: "";
+            width: 30%;
+            height: 0.2rem;
+            background: $Primary;
+            position: absolute;
+            bottom: -30%;
+            left: 1.1rem;
+          }
         }
       }
+    }
+  }
+}
+
+@include tablet {
+  #header {
+    nav {
+      position: fixed;
+      background: rgb(56, 56, 56);
+      height: 100vh;
+      width: 20rem;
+      top: 0;
+      box-shadow: 2px 2px 50px gray;
+      right: -25rem;
+      text-align: left;
+      z-index: 1;
+      #closebtn {
+        display: block;
+      }
+      ul {
+        @include flex(column, space-evenly, center);
+        padding: 0;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@include mobile {
+  #header {
+    padding: {
+      top: 5%;
+      bottom: 5%;
+    }
+    #openbtn {
+      display: block;
     }
   }
 }

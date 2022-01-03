@@ -8,15 +8,64 @@
 }
 
 @mixin background {
-  background-position: center;
+  //background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-@mixin header-bg {
-  background: url($header_desktop) no-repeat center / cover;
+@mixin newProduct-bg {
+  background-image: url($image-hero-desktop);
+  background-position: bottom right;
+  @include background;
+  @include tablet {
+    background-image: url($image-hero-tablet);
+  }
   @include mobile {
-    background-image: url($header_mobile);
+    background-image: url($image-hero-mobile);
+  }
+}
+
+@mixin button {
+  padding: 1.25% 4%;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  @include tablet {
+    width: 50%;
+    padding: 2.5% 4%;
+  }
+}
+
+@mixin button-1 {
+  @include button;
+  color: $White;
+  background-color: $Primary;
+  border-color: $Primary;
+  &:hover {
+    background-color: $Secondary;
+    border-color: $Secondary;
+  }
+}
+
+@mixin button-2 {
+  @include button;
+  color: $Black;
+  background-color: $White;
+  border-color: $Black;
+  &:hover {
+    background-color: $Black;
+    border-color: $Black;
+    color: $White;
+  }
+}
+
+@mixin button-3 {
+  @include button;
+  color: $Light_Black;
+  background-color: transparent;
+  border-color: transparent;
+  &:hover {
+    color: $Primary;
   }
 }
 

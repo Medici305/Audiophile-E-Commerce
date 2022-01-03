@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 /* Colors */
+/* Bg-images */
 /* Colors */
+/* Bg-images */
 #header {
   display: flex;
   flex-direction: row;
@@ -9,29 +11,43 @@
   padding: 2% 10%;
   background: transparent;
 }
+#header #openbtn {
+  display: none;
+  color: #fff;
+  cursor: pointer;
+}
 #header .logo {
   color: #fff;
 }
-#header ul {
+#header nav {
+  transition: all 1s ease-in-out;
+}
+#header nav #closebtn {
+  color: #fff;
+  margin: 1rem;
+  display: none;
+  cursor: pointer;
+}
+#header nav ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-#header ul li {
+#header nav ul li {
   padding: 0 5%;
   position: relative;
 }
-#header ul li a {
+#header nav ul li a {
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
 }
-#header ul li a:hover, #header ul li a.active {
+#header nav ul li a:hover, #header nav ul li a.active {
   color: #d87d4a;
 }
-#header ul li a.active::after, #header ul li a:hover::after {
+#header nav ul li a.active::after, #header nav ul li a:hover::after {
   content: "";
   width: 30%;
   height: 0.2rem;
@@ -41,6 +57,115 @@
   left: 1.1rem;
 }
 
+@media (max-width: 768px) {
+  #header nav {
+    position: fixed;
+    background: #383838;
+    height: 100vh;
+    width: 20rem;
+    top: 0;
+    box-shadow: 2px 2px 50px gray;
+    right: -25rem;
+    text-align: left;
+    z-index: 1;
+  }
+  #header nav #closebtn {
+    display: block;
+  }
+  #header nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    height: 100%;
+  }
+}
+@media (max-width: 578px) {
+  #header {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  #header #openbtn {
+    display: block;
+  }
+}
+/* Colors */
+/* Bg-images */
+/* Colors */
+/* Bg-images */
+#newProduct {
+  min-height: 90vh;
+  background-image: url("../../../assets/home/desktop/image-hero.jpg");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 1s ease-in-out;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  #newProduct {
+    background-image: url("url(../../../assets/home/tablet/image-header.jpg");
+  }
+}
+@media (max-width: 578px) {
+  #newProduct {
+    background-image: url("url(../../../assets/home/mobile/image-header.jpg");
+  }
+}
+#newProduct > * {
+  z-index: 2;
+}
+#newProduct h1,
+#newProduct p {
+  color: white;
+}
+#newProduct h6 {
+  margin-bottom: 1rem;
+}
+#newProduct::after {
+  content: "";
+  position: absolute;
+  height: 91%;
+  width: 100%;
+  bottom: 10;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+#newProduct button {
+  padding: 1.25% 4%;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  background-color: #d87d4a;
+  border-color: #d87d4a;
+}
+@media (max-width: 768px) {
+  #newProduct button {
+    width: 50%;
+    padding: 2.5% 4%;
+  }
+}
+#newProduct button:hover {
+  background-color: #fbaf85;
+  border-color: #fbaf85;
+}
+
+@media (max-width: 768px) {
+  #newProduct {
+    align-items: center;
+  }
+  #newProduct p {
+    text-align: center;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -54,6 +179,10 @@ body {
   background: #000;
 }
 
+html {
+  font-size: 0.813rem;
+}
+
 h1,
 h2,
 h3,
@@ -64,9 +193,10 @@ h6 {
 }
 
 h1 {
-  font-size: 3.5rem;
-  line-height: 3.625rem;
+  font-size: 5rem;
+  line-height: 4.725rem;
   letter-spacing: 0.125rem;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -96,12 +226,22 @@ h5 {
 h6 {
   font-size: 1.125rem;
   line-height: 1.5rem;
-  letter-spacing: 0.081rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  color: #686868;
 }
 
 p {
-  font-size: 0.938rem;
-  line-height: 1.563rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+@media (max-width: 768px) {
+  p {
+    padding-top: 7.5%;
+    padding-bottom: 7.5%;
+  }
 }
 
 a {

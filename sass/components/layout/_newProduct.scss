@@ -1,0 +1,46 @@
+@import "../helpers/mixins";
+@import "../helpers/variable";
+
+#newProduct {
+  min-height: 90vh;
+  @include newProduct-bg;
+  transition: all 1s ease-in-out;
+
+  padding: {
+    left: 10%;
+    right: 10%;
+  }
+  width: 100%;
+  @include flex(column, center, start);
+  & > * {
+    z-index: 2;
+  }
+  h1,
+  p {
+    color: white;
+  }
+  h6 {
+    margin-bottom: 1rem;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    height: 91%;
+    width: 100%;
+    bottom: 10;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  button {
+    @include button-1;
+  }
+}
+
+@include tablet {
+  #newProduct {
+    align-items: center;
+    p {
+      text-align: center;
+    }
+  }
+}
