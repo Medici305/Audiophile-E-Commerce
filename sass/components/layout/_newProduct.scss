@@ -4,7 +4,7 @@
 #newProduct {
   min-height: 90vh;
   @include newProduct-bg;
-  transition: all 1s ease-in-out;
+  //transition: all 1s ease-in-out;
 
   padding: {
     left: 10%;
@@ -41,6 +41,20 @@
     align-items: center;
     p {
       text-align: center;
+      br {
+        display: none;
+      }
+    }
+  }
+}
+
+@include mobile {
+  #newProduct {
+    min-height: 65vh;
+    &::after {
+      height: 66%;
+      width: 100%;
+      bottom: 10;
     }
   }
 }

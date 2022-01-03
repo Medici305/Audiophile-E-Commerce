@@ -8,7 +8,6 @@
 }
 
 @mixin background {
-  //background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -22,17 +21,21 @@
   }
   @include mobile {
     background-image: url($image-hero-mobile);
+    background-position: bottom center;
   }
 }
 
 @mixin button {
   padding: 1.25% 4%;
   text-transform: uppercase;
-  font-weight: bold;
   cursor: pointer;
   @include tablet {
     width: 50%;
-    padding: 2.5% 4%;
+    padding: 3% 4%;
+  }
+  @include mobile {
+    padding: 6%;
+    width: 65%;
   }
 }
 
@@ -41,6 +44,7 @@
   color: $White;
   background-color: $Primary;
   border-color: $Primary;
+  font-weight: bold;
   &:hover {
     background-color: $Secondary;
     border-color: $Secondary;
@@ -52,6 +56,7 @@
   color: $Black;
   background-color: $White;
   border-color: $Black;
+  font-weight: bold;
   &:hover {
     background-color: $Black;
     border-color: $Black;
@@ -64,8 +69,10 @@
   color: $Light_Black;
   background-color: transparent;
   border-color: transparent;
+  padding-right: 5rem;
   &:hover {
     color: $Primary;
+    font-weight: bold;
   }
 }
 

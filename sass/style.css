@@ -9,7 +9,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 2% 10%;
-  background: transparent;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  background: #000;
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  left: 0;
 }
 #header #openbtn {
   display: none;
@@ -100,7 +105,6 @@
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: all 1s ease-in-out;
   padding-left: 10%;
   padding-right: 10%;
   width: 100%;
@@ -117,6 +121,7 @@
 @media (max-width: 578px) {
   #newProduct {
     background-image: url("url(../../../assets/home/mobile/image-header.jpg");
+    background-position: bottom center;
   }
 }
 #newProduct > * {
@@ -141,16 +146,22 @@
 #newProduct button {
   padding: 1.25% 4%;
   text-transform: uppercase;
-  font-weight: bold;
   cursor: pointer;
   color: #fff;
   background-color: #d87d4a;
   border-color: #d87d4a;
+  font-weight: bold;
 }
 @media (max-width: 768px) {
   #newProduct button {
     width: 50%;
-    padding: 2.5% 4%;
+    padding: 3% 4%;
+  }
+}
+@media (max-width: 578px) {
+  #newProduct button {
+    padding: 6%;
+    width: 65%;
   }
 }
 #newProduct button:hover {
@@ -165,7 +176,76 @@
   #newProduct p {
     text-align: center;
   }
+  #newProduct p br {
+    display: none;
+  }
 }
+@media (max-width: 578px) {
+  #newProduct {
+    min-height: 65vh;
+  }
+  #newProduct::after {
+    height: 66%;
+    width: 100%;
+    bottom: 10;
+  }
+}
+/* Colors */
+/* Bg-images */
+/* Colors */
+/* Bg-images */
+#feature {
+  min-height: 100vh;
+  background: #fff;
+  padding: 2% 10%;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#feature button {
+  padding: 1.25% 4%;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #101010;
+  background-color: transparent;
+  border-color: transparent;
+  padding-right: 5rem;
+  text-align: center;
+  border: 2px solid blue;
+}
+@media (max-width: 768px) {
+  #feature button {
+    width: 50%;
+    padding: 3% 4%;
+  }
+}
+@media (max-width: 578px) {
+  #feature button {
+    padding: 6%;
+    width: 65%;
+  }
+}
+#feature button:hover {
+  color: #d87d4a;
+  font-weight: bold;
+}
+#feature button i {
+  color: #d87d4a;
+  margin-left: 1rem;
+}
+#feature .fe-box {
+  flex-basis: 30%;
+  border: 2px solid red;
+  text-align: center;
+}
+#feature .fe-box img {
+  width: 100%;
+  height: auto;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -197,6 +277,15 @@ h1 {
   line-height: 4.725rem;
   letter-spacing: 0.125rem;
   text-transform: uppercase;
+}
+@media (max-width: 578px) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 3.725rem;
+  }
+  h1 br {
+    display: none;
+  }
 }
 
 h2 {

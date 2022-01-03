@@ -1,0 +1,29 @@
+@import "../helpers/mixins";
+@import "../helpers/variable";
+
+#feature {
+  min-height: 100vh;
+  background: $White;
+  padding: 2% 10%;
+  border: 2px solid black;
+  @include flex(row, space-between, center);
+  flex-wrap: wrap;
+  button {
+    @include button-3;
+    text-align: center;
+    border: 2px solid blue;
+    i {
+      color: $Primary;
+      margin-left: 1rem;
+    }
+  }
+  .fe-box {
+    flex-basis: 30%;
+    border: 2px solid red;
+    text-align: center;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
