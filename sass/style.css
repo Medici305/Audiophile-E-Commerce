@@ -203,8 +203,7 @@
 #feature {
   min-height: 50vh;
   background: #fff;
-  padding: 12.5% 7.5% 10% 10%;
-  border: 2px solid black;
+  padding: 12.5% 10% 7.5% 10%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -247,9 +246,15 @@
 #feature button:hover {
   color: #d87d4a;
 }
-#feature button i {
-  color: #d87d4a;
-  margin-left: 1rem;
+@media (max-width: 578px) {
+  #feature button {
+    margin: 0;
+  }
+  #feature button::after {
+    transform: translateY(-50%);
+    top: 50%;
+    right: 30%;
+  }
 }
 #feature .fe-box {
   flex-basis: 31%;
@@ -269,6 +274,32 @@
   height: auto;
 }
 
+@media (max-width: 768px) {
+  #feature {
+    padding: 20% 2.5% 15% 2.5%;
+  }
+  #feature .fe-box img {
+    width: 75%;
+    transform: translate(20%, -50%);
+  }
+}
+@media (max-width: 578px) {
+  #feature {
+    padding-top: 40%;
+    flex-direction: column;
+  }
+  #feature .fe-box {
+    flex-basis: 100%;
+    width: 100%;
+  }
+  #feature .fe-box:nth-child(2) {
+    margin: 10rem 0;
+  }
+  #feature .fe-box img {
+    width: 50%;
+    transform: translate(50%, -50%);
+  }
+}
 * {
   padding: 0;
   margin: 0;

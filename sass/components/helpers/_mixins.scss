@@ -84,6 +84,14 @@
   &:hover {
     color: $Primary;
   }
+  @include mobile {
+    margin: 0;
+    &::after {
+      transform: translateY(-50%);
+      top: 50%;
+      right: 30%;
+    }
+  }
 }
 
 @mixin laptop {

@@ -4,21 +4,17 @@
 #feature {
   min-height: 50vh;
   background: $White;
-  padding: 12.5% 7.5% 10% 10%;
-  border: 2px solid black;
+  padding: 12.5% 10% 7.5% 10%;
   @include flex(row, space-between, center);
   flex-wrap: wrap;
   button {
     @include button-3;
-    i {
-      color: $Primary;
-      margin-left: 1rem;
-    }
   }
   .fe-box {
     flex-basis: 31%;
     padding-top: 7.5rem;
     height: 50%;
+    //cursor: pointer;
     //border: 2px solid red;
     background-color: $Gray;
     text-align: center;
@@ -31,6 +27,36 @@
       transform: translate(50%, -50%);
       width: 50%;
       height: auto;
+    }
+  }
+}
+
+@include tablet {
+  #feature {
+    padding: 20% 2.5% 15% 2.5%;
+    .fe-box {
+      img {
+        width: 75%;
+        transform: translate(20%, -50%);
+      }
+    }
+  }
+}
+
+@include mobile {
+  #feature {
+    padding-top: 40%;
+    flex-direction: column;
+    .fe-box {
+      &:nth-child(2) {
+        margin: 10rem 0;
+      }
+      flex-basis: 100%;
+      width: 100%;
+      img {
+        width: 50%;
+        transform: translate(50%, -50%);
+      }
     }
   }
 }
