@@ -25,10 +25,11 @@
   }
 }
 
-@mixin button {
-  padding: 1.25% 4%;
+@mixin button($y, $x) {
+  padding: $y $x;
   text-transform: uppercase;
   cursor: pointer;
+  letter-spacing: 0.1rem;
   @include tablet {
     width: 50%;
     padding: 3% 4%;
@@ -40,11 +41,10 @@
 }
 
 @mixin button-1 {
-  @include button;
+  @include button(1.25%, 4%);
   color: $White;
   background-color: $Primary;
   border-color: $Primary;
-  font-weight: bold;
   &:hover {
     background-color: $Secondary;
     border-color: $Secondary;
@@ -52,11 +52,10 @@
 }
 
 @mixin button-2 {
-  @include button;
+  @include button(1.25%, 4%);
   color: $Black;
   background-color: $White;
   border-color: $Black;
-  font-weight: bold;
   &:hover {
     background-color: $Black;
     border-color: $Black;
@@ -65,14 +64,25 @@
 }
 
 @mixin button-3 {
-  @include button;
-  color: $Light_Black;
+  @include button(2%, 10%);
+  color: $Medium-Gray;
   background-color: transparent;
   border-color: transparent;
-  padding-right: 5rem;
+  position: relative;
+  margin: 1rem 0;
+  &::after {
+    content: "";
+    position: absolute;
+    background: url(../../../assets/shared/desktop/icon-arrow-right.svg)
+      no-repeat center / contain;
+    top: 0;
+    right: 10%;
+    transform: translateY(55%);
+    width: 1rem;
+    height: 1rem;
+  }
   &:hover {
     color: $Primary;
-    font-weight: bold;
   }
 }
 

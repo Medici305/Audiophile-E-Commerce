@@ -5,9 +5,13 @@ $Light_Black: #101010;
 $Black: #000;
 $White: #fff;
 $Dark-Grey: #f1f1f1;
+$Medium-Gray: rgb(104, 104, 104);
 $Gray: #fafafa;
 
 /* Bg-images */
 $image-hero-desktop: "../../../assets/home/desktop/image-hero.jpg";
-$image-hero-tablet: "url(../../../assets/home/tablet/image-header.jpg";
-$image-hero-mobile: "url(../../../assets/home/mobile/image-header.jpg";
+$image-hero-tablet: "../../../assets/home/tablet/image-header.jpg";
+$image-hero-mobile: "../../../assets/home/mobile/image-header.jpg";
+
+/* Feature Section */
+$headphones-desktop: "../../../assets/category-headphones/image-xx99-mark-one-removebg-preview.png";

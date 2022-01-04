@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 /* Colors */
 /* Bg-images */
+/* Feature Section */
 /* Colors */
 /* Bg-images */
+/* Feature Section */
 #header {
   display: flex;
   flex-direction: row;
@@ -97,8 +99,10 @@
 }
 /* Colors */
 /* Bg-images */
+/* Feature Section */
 /* Colors */
 /* Bg-images */
+/* Feature Section */
 #newProduct {
   min-height: 90vh;
   background-image: url("../../../assets/home/desktop/image-hero.jpg");
@@ -115,12 +119,12 @@
 }
 @media (max-width: 768px) {
   #newProduct {
-    background-image: url("url(../../../assets/home/tablet/image-header.jpg");
+    background-image: url("../../../assets/home/tablet/image-header.jpg");
   }
 }
 @media (max-width: 578px) {
   #newProduct {
-    background-image: url("url(../../../assets/home/mobile/image-header.jpg");
+    background-image: url("../../../assets/home/mobile/image-header.jpg");
     background-position: bottom center;
   }
 }
@@ -147,10 +151,10 @@
   padding: 1.25% 4%;
   text-transform: uppercase;
   cursor: pointer;
+  letter-spacing: 0.1rem;
   color: #fff;
   background-color: #d87d4a;
   border-color: #d87d4a;
-  font-weight: bold;
 }
 @media (max-width: 768px) {
   #newProduct button {
@@ -192,12 +196,14 @@
 }
 /* Colors */
 /* Bg-images */
+/* Feature Section */
 /* Colors */
 /* Bg-images */
+/* Feature Section */
 #feature {
-  min-height: 100vh;
+  min-height: 50vh;
   background: #fff;
-  padding: 2% 10%;
+  padding: 12.5% 7.5% 10% 10%;
   border: 2px solid black;
   display: flex;
   flex-direction: row;
@@ -206,15 +212,15 @@
   flex-wrap: wrap;
 }
 #feature button {
-  padding: 1.25% 4%;
+  padding: 2% 10%;
   text-transform: uppercase;
   cursor: pointer;
-  color: #101010;
+  letter-spacing: 0.1rem;
+  color: #686868;
   background-color: transparent;
   border-color: transparent;
-  padding-right: 5rem;
-  text-align: center;
-  border: 2px solid blue;
+  position: relative;
+  margin: 1rem 0;
 }
 @media (max-width: 768px) {
   #feature button {
@@ -228,21 +234,38 @@
     width: 65%;
   }
 }
+#feature button::after {
+  content: "";
+  position: absolute;
+  background: url(../../../assets/shared/desktop/icon-arrow-right.svg) no-repeat center/contain;
+  top: 0;
+  right: 10%;
+  transform: translateY(55%);
+  width: 1rem;
+  height: 1rem;
+}
 #feature button:hover {
   color: #d87d4a;
-  font-weight: bold;
 }
 #feature button i {
   color: #d87d4a;
   margin-left: 1rem;
 }
 #feature .fe-box {
-  flex-basis: 30%;
-  border: 2px solid red;
+  flex-basis: 31%;
+  padding-top: 7.5rem;
+  height: 50%;
+  background-color: #fafafa;
   text-align: center;
+  border-radius: 0.5rem;
+  position: relative;
 }
 #feature .fe-box img {
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(50%, -50%);
+  width: 50%;
   height: auto;
 }
 
@@ -310,6 +333,7 @@ h5 {
   font-size: 1.5rem;
   line-height: 2.063rem;
   letter-spacing: 0.106rem;
+  text-transform: uppercase;
 }
 
 h6 {
